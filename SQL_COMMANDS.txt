@@ -1,0 +1,15 @@
+CREATE TABLE `taxes`.`new_table` (
+  `id` INT NOT NULL,
+  `vehicle_type` VARCHAR(10) NOT NULL,
+  `license_plate` VARCHAR(8) NOT NULL,
+  `entry_time` TIME NOT NULL,
+  `exit_time` TIME NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO `taxes`.`vehicles` (`id`, `vehicle_type`, `license_plate`, `entry_time`) VALUES ('1', 'Passenger', 'NKE3453', '08:45');
+INSERT INTO `taxes`.`vehicles` (`id`, `vehicle_type`, `license_plate`, `entry_time`) VALUES ('2', 'Bus', 'NKE3456', '09:00');
+INSERT INTO `taxes`.`vehicles` (`id`, `vehicle_type`, `license_plate`, `entry_time`) VALUES ('3', 'Truck', 'NKZ4543', '10:00');
+INSERT INTO `taxes`.`vehicles` (`id`, `vehicle_type`, `license_plate`, `entry_time`, `exit_time`) VALUES ('4', 'Truck', 'NKZ1234', '09:30', '11:20');
+INSERT INTO `taxes`.`vehicles` (`id`, `vehicle_type`, `license_plate`, `entry_time`, `exit_time`) VALUES ('5', 'Passenger', 'NKE5545', '12:35', '13:00');
+INSERT INTO `taxes`.`vehicles` (`id`, `vehicle_type`, `license_plate`, `entry_time`, `exit_time`) VALUES ('6', 'Bus', 'NKE2121', '09:00', '17:00');
+INSERT INTO `taxes`.`vehicles` (`id`, `vehicle_type`, `license_plate`, `entry_time`, `exit_time`) VALUES ('7', 'Truck', 'NKE8899', '09:00', '17:350');
