@@ -9,7 +9,16 @@ public class Vehicle {
 	private String license_plate;
 	private Time entry_time;
 	private Time exit_time;
+	private int timeStayed;
 	private int fee;
+	
+	public int getTimeStayed() {
+		return timeStayed;
+	}
+	public void setTimeStayed(int timeStayed) {
+		this.timeStayed = timeStayed;
+	}
+	
 	public int getFee() {
 		return fee;
 	}
@@ -49,7 +58,9 @@ public class Vehicle {
 	@Override
 	public String toString() {
 		return "Vehicle [id=" + id + ", vehicle_type=" + vehicle_type + ", license_plate=" + license_plate
-				+ ", entry_time=" + entry_time + ", exit_time=" + exit_time + ", fee=" + fee + "]";
+				+ ", entry_time=" + entry_time + ", exit_time=" + exit_time + ", timeStayed=" + timeStayed + ", fee="
+				+ fee + "]";
 	}
+
 	
 }

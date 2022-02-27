@@ -14,20 +14,23 @@ public class VehicleRowMapper implements RowMapper<Vehicle> {
 	public Vehicle mapRow(ResultSet rs, int rowNum) throws SQLException { // called for as many rows as i have in my db
 
 		Vehicle vehicle = new Vehicle();
+
 		vehicle.setId(rs.getInt("id"));
 		String type = rs.getString("vehicle_type");
 		vehicle.setVehicle_type(type);
 		vehicle.setLicense_plate(rs.getString("license_plate"));
 		vehicle.setEntry_time(rs.getTime("entry_time"));
-		vehicle.setExit_time(rs.getTime("exit_time"));
+		Time exit = rs.getTime("exit_time");
+		vehicle.setExit_time(exit);
 
 		if (rs.getTime("exit_time") != null) {
 			int mins = ToMinutes(rs.getTime("entry_time"), rs.getTime("exit_time"));
-
+			vehicle.setTimeStayed(mins);
 			vehicle.setFee(FeeCalculator(type, mins));
 		}
 
-		return vehicle;
+			return vehicle;
+
 	}
 
 	private int ToMinutes(Time entime, Time extime) {
