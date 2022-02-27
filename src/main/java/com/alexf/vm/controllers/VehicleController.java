@@ -17,7 +17,7 @@ public class VehicleController {
 	@Autowired
 	private VehicleDAO vehicleDAO;
 
-	@GetMapping("/showVehicle")
+	@GetMapping("/")
 	public String showVehicleList(Model model) {
 
 		// call dao method to get data
